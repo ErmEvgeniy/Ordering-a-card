@@ -36,7 +36,7 @@ class CallbackTest {
     void shouldTestV1() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
-        elements.get(0).sendKeys("Василий Пупкин");
+        elements.get(0).sendKeys("Василий");
         elements.get(1).sendKeys("+79270000000");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button")).click();
@@ -48,7 +48,7 @@ class CallbackTest {
     @Test
     void shouldTestV2() {
         driver.get("http://localhost:9999");
-        driver.findElement(By.cssSelector("[type='text']")).sendKeys("Василий Пупкин");
+        driver.findElement(By.cssSelector("[type='text']")).sendKeys("Василий");
         driver.findElement(By.cssSelector("[type = 'tel']")).sendKeys("+79270000000");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.className("button")).click();
