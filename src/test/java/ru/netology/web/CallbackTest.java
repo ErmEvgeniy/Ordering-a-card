@@ -13,7 +13,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class CallbackTest {
+public class CallbackTest {
     private WebDriver driver;
 
     @BeforeAll
@@ -55,6 +55,5 @@ class CallbackTest {
         String text = driver.findElement(By.className("alert-success")).getText();
         assertEquals("Ваша заявка успешно отправлена!", text.trim());
     }
-
 
 }
